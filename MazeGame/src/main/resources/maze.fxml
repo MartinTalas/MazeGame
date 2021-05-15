@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="main_anchor" fx:id="mainAnchor" maxHeight="720.0" maxWidth="1280.0" onKeyPressed="#keyboardControl" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Maze">
+   <Pane fx:id="mainPanel" layoutY="1.0" maxHeight="720.0" maxWidth="1280.0" prefHeight="720.0" prefWidth="1280.0">
+      <GridPane fx:id="gameField" layoutX="40.0" layoutY="40.0" prefHeight="64.0" prefWidth="64.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <GridPane fx:id="playerField" layoutX="40.0" layoutY="40.0" prefHeight="64.0" prefWidth="64.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Button fx:id="giveUpBtn" layoutX="959.0" layoutY="621.0" mnemonicParsing="false" onAction="#giveUpBtnClick" prefHeight="64.0" prefWidth="167.0" text="Give up" visible="false">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label layoutX="740.0" layoutY="40.0" text="Maze Game" textFill="#8d8d8d">
+         <font>
+            <Font name="Arial Italic" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="1098.0" layoutY="86.0" text="by GKPLJP" textFill="#727272">
+         <font>
+            <Font name="Arial Bold" size="14.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="hpGrid" gridLinesVisible="true" layoutX="1144.0" layoutY="121.0" prefHeight="32.0" prefWidth="98.0" visible="false">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="balbtn" layoutX="703.0" layoutY="621.0" onMouseClicked="#bal" prefHeight="64.0" prefWidth="64.0" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label fx:id="lebtn" layoutX="768.0" layoutY="621.0" onMouseClicked="#le" prefHeight="64.0" prefWidth="64.0" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label fx:id="jobbbtn" layoutX="833.0" layoutY="621.0" onMouseClicked="#jobb" prefHeight="64.0" prefWidth="64.0" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <Label fx:id="felbtn" layoutX="768.0" layoutY="556.0" onMouseClicked="#fel" prefHeight="64.0" prefWidth="64.0" visible="false">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Label>
+      <GridPane fx:id="coinGrid" gridLinesVisible="true" layoutX="743.0" layoutY="121.0" visible="false">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="32.0" prefWidth="32.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="32.0" prefHeight="32.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label fx:id="gameOverLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="783.0" layoutY="165.0" prefHeight="108.0" prefWidth="403.0" textAlignment="CENTER">
+         <font>
+            <Font name="Arial" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="colonLabel" layoutX="776.0" layoutY="117.0" prefHeight="37.0" prefWidth="14.0" text=":" visible="false" textFill="#8d8d8d">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="coinCountLabel" layoutX="791.0" layoutY="119.0" prefHeight="37.0" prefWidth="98.0" textFill="#8d8d8d">
+         <font>
+            <Font name="Arial Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label fx:id="timerLabel" layoutX="946.0" layoutY="119.0" text="00:00" textFill="#888888" visible="false">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Line endX="462.0" layoutX="778.0" layoutY="106.0" startX="-38.0" stroke="#515151" />
+      <Button fx:id="maze1Btn" layoutX="897.0" layoutY="278.0" mnemonicParsing="false" onAction="#maze1ButtonClick" prefHeight="64.0" prefWidth="178.0" text="Play: Maze 1">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="maze2Btn" layoutX="897.0" layoutY="369.0" mnemonicParsing="false" onAction="#maze2ButtonClick" prefHeight="64.0" prefWidth="178.0" text="Play: Maze 2">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="maze3Btn" layoutX="897.0" layoutY="460.0" mnemonicParsing="false" onAction="#maze3ButtonClick" prefHeight="64.0" prefWidth="178.0" text="Play: Maze 3">
+         <font>
+            <Font size="25.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Pane fx:id="infoPanel" layoutX="41.0" layoutY="41.0" prefHeight="640.0" prefWidth="618.0">
+         <Label alignment="CENTER" layoutX="197.0" layoutY="14.0" prefHeight="74.0" prefWidth="219.0" text="Welcome" textAlignment="CENTER" textFill="#8d8d8d">
+            <font>
+               <Font name="Arial" size="48.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="105.0" layoutY="552.0" prefHeight="74.0" prefWidth="403.0" text="Have fun!" textFill="#8d8d8d">
+            <font>
+               <Font name="Arial" size="48.0" />
+            </font>
+         </Label>
+         <Label alignment="CENTER" layoutX="51.0" layoutY="240.0" lineSpacing="5.0" prefHeight="202.0" prefWidth="511.0" text="Press one of the buttons&#10;to start a game.&#10;You can choose between &#10;the maps you would like to play." textAlignment="CENTER" textFill="#666666">
+            <font>
+               <Font name="Arial" size="28.0" />
+            </font>
+         </Label>
+         <Label layoutX="132.0" layoutY="124.0" opacity="0.05" text="Maze Game" textFill="#8d8d8d">
+            <font>
+               <Font name="Arial Italic" size="64.0" />
+            </font>
+         </Label>
+         <Line endX="462.0" layoutX="111.0" layoutY="88.0" startX="-65.0" stroke="#515151" />
+         <Line endX="462.0" layoutX="111.0" layoutY="558.0" startX="-65.0" stroke="#515151" />
+      </Pane>
+      <Pane fx:id="escapePanel" layoutX="150.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="980.0" visible="false">
+         <Pane fx:id="controlPanel" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="980.0">
+            <Label fx:id="buttonLabel" layoutX="715.0" layoutY="252.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="129.0" prefWidth="194.0" text="BUTTON" />
+            <Label fx:id="arrowLabel" layoutX="399.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="170.0" text="ARROWS" />
+            <Label fx:id="wasdLabel" layoutX="80.0" layoutY="259.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="115.0" prefWidth="170.0" text="WASD" />
+            <Label layoutX="115.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="WASD" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="420.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="ARROWS" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="740.0" layoutY="195.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="BUTTONS" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial Bold" size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="68.0" layoutY="52.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="559.0" text="                         " textFill="#8d8d8d" underline="true">
+               <font>
+                  <Font size="80.0" />
+               </font>
+            </Label>
+            <Label layoutX="700.0" layoutY="61.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="121.0" prefWidth="273.0" text="          " textFill="#8d8d8d" underline="true">
+               <font>
+                  <Font size="80.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="68.0" layoutY="93.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="548.0" text="Keyboard" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="93.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="47.0" prefWidth="219.0" text="Buttons" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+         </Pane>
+         <Pane fx:id="creditPanel" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="980.0" >
+            <Label layoutX="320.0" layoutY="155.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="Made by GKPLJP" textFill="#8d8d8d">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="445.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="2021" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+         </Pane>
+         <Pane fx:id="escInfoPanel" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="980.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="133.0" layoutY="115.0" text="Reach the finish line &#10;and collect as many coins as possible&#10;while avoiding various traps. &#10;Watch out for the hidden surprises as well!" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+         </Pane>
+         <Pane fx:id="infSelectorPanel" layoutX="8.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="318.0">
+            <Label fx:id="infLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#infoClick" prefHeight="62.0" prefWidth="318.0" text="Info" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </Pane>
+         <Pane fx:id="conSelectorPanel" layoutX="326.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="327.0">
+            <Label fx:id="conLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#controlsClick" prefHeight="70.0" prefWidth="327.0" text="Controls" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </Pane>
+         <Pane fx:id="creSelectorPanel" layoutX="653.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="319.0">
+            <Label fx:id="creLabel" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#creditClick" prefHeight="70.0" prefWidth="327.0" text="Credits" textAlignment="CENTER" textFill="#8d8d8d">
+               <font>
+                  <Font name="Arial" size="32.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+         </Pane>
+         <Label layoutX="399.0" layoutY="490.0" text="Press Escape to exit [Esc]" textFill="#8d8d8d" underline="true">
+            <font>
+               <Font name="Arial Bold" size="14.0" />
+            </font>
+         </Label>
+      </Pane>
+      <Label layoutX="1217.0" layoutY="703.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="63.0" text="version v1.0.6">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+   </Pane>
+</AnchorPane>
